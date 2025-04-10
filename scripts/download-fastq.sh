@@ -49,4 +49,5 @@ fastp \
     --in2 $FASTQ_DEST/$FASTQ_R2 \
     --out1 $TRIMMED_DIR/$FASTQ_R1 \
     --out2 $TRIMMED_DIR/$FASTQ_R2 \
-    --html "${REPORTS_DIR}/${STUDY_ID}_report.html"
+    --html "${REPORTS_DIR}/${STUDY_ID}_report.html" \
+    --json "${REPORTS_DIR}/${STUDY_ID}_report.json"
