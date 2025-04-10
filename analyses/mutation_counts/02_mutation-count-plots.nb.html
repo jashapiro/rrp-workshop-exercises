@@ -3154,9 +3154,9 @@ defined input paths for in the setup section.</p>
 <pre class="r"><code># read in mutation count files for plotting
 lgat_df &lt;- readr::read_tsv(lgat_path)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-message-begin eyJkYXRhIjoiUm93czogNjMxIENvbHVtbnM6IDNcbuKUgOKUgCBDb2x1bW4gc3BlY2lmaWNhdGlvbiDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIBcbkRlbGltaXRlcjogXCJcXHRcIlxuY2hyICgxKTogSHVnb19TeW1ib2xcbmRibCAoMik6IG11dGF0ZWRfc2FtcGxlcywgdG90YWxfbXV0c1xuXG7ihLkgVXNlIGBzcGVjKClgIHRvIHJldHJpZXZlIHRoZSBmdWxsIGNvbHVtbiBzcGVjaWZpY2F0aW9uIGZvciB0aGlzIGRhdGEuXG7ihLkgU3BlY2lmeSB0aGUgY29sdW1uIHR5cGVzIG9yIHNldCBgc2hvd19jb2xfdHlwZXMgPSBGQUxTRWAgdG8gcXVpZXQgdGhpcyBtZXNzYWdlLlxuIn0= -->
+<!-- rnb-message-begin eyJkYXRhIjoiUm93czogNjMxIENvbHVtbnM6IDNcbuKUgOKUgCBDb2x1bW4gc3BlY2lmaWNhdGlvbiDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIBcbkRlbGltaXRlcjogXCJcXHRcIlxuY2hyICgxKTogSHVnb19TeW1ib2xcbmRibCAoMik6IG11dGF0ZWRfc2FtcGxlcywgdG90YWxfbXV0c1xuXG7ihLkgVXNlIGBzcGVjKClgIHRvIHJldHJpZXZlIHRoZSBmdWxsIGNvbHVtbiBzcGVjaWZpY2F0aW9uIGZvciB0aGlzIGRhdGEuXG7ihLkgU3BlY2lmeSB0aGUgY29sdW1uIHR5cGVzIG9yIHNldCBgc2hvd19jb2xfdHlwZXMgPSBGQUxTRWAgdG8gcXVpZXQgdGhpcyBtZXNzYWdlLlxuIn0= -->
 <pre><code>Rows: 631 Columns: 3
-── Column specification ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+── Column specification ───────────────────────────────────────────────────────────────────────
 Delimiter: &quot;\t&quot;
 chr (1): Hugo_Symbol
 dbl (2): mutated_samples, total_muts
@@ -3167,9 +3167,9 @@ dbl (2): mutated_samples, total_muts
 <!-- rnb-source-begin eyJkYXRhIjoibWJfZGYgPC0gcmVhZHI6OnJlYWRfdHN2KG1iX3BhdGgpIn0= -->
 <pre class="r"><code>mb_df &lt;- readr::read_tsv(mb_path)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-message-begin eyJkYXRhIjoiUm93czogMTI1NCBDb2x1bW5zOiAzXG7ilIDilIAgQ29sdW1uIHNwZWNpZmljYXRpb24g4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSAXG5EZWxpbWl0ZXI6IFwiXFx0XCJcbmNociAoMSk6IEh1Z29fU3ltYm9sXG5kYmwgKDIpOiBtdXRhdGVkX3NhbXBsZXMsIHRvdGFsX211dHNcblxu4oS5IFVzZSBgc3BlYygpYCB0byByZXRyaWV2ZSB0aGUgZnVsbCBjb2x1bW4gc3BlY2lmaWNhdGlvbiBmb3IgdGhpcyBkYXRhLlxu4oS5IFNwZWNpZnkgdGhlIGNvbHVtbiB0eXBlcyBvciBzZXQgYHNob3dfY29sX3R5cGVzID0gRkFMU0VgIHRvIHF1aWV0IHRoaXMgbWVzc2FnZS5cbiJ9 -->
+<!-- rnb-message-begin eyJkYXRhIjoiUm93czogMTI1NCBDb2x1bW5zOiAzXG7ilIDilIAgQ29sdW1uIHNwZWNpZmljYXRpb24g4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSAXG5EZWxpbWl0ZXI6IFwiXFx0XCJcbmNociAoMSk6IEh1Z29fU3ltYm9sXG5kYmwgKDIpOiBtdXRhdGVkX3NhbXBsZXMsIHRvdGFsX211dHNcblxu4oS5IFVzZSBgc3BlYygpYCB0byByZXRyaWV2ZSB0aGUgZnVsbCBjb2x1bW4gc3BlY2lmaWNhdGlvbiBmb3IgdGhpcyBkYXRhLlxu4oS5IFNwZWNpZnkgdGhlIGNvbHVtbiB0eXBlcyBvciBzZXQgYHNob3dfY29sX3R5cGVzID0gRkFMU0VgIHRvIHF1aWV0IHRoaXMgbWVzc2FnZS5cbiJ9 -->
 <pre><code>Rows: 1254 Columns: 3
-── Column specification ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+── Column specification ───────────────────────────────────────────────────────────────────────
 Delimiter: &quot;\t&quot;
 chr (1): Hugo_Symbol
 dbl (2): mutated_samples, total_muts
@@ -3186,9 +3186,9 @@ exons:</p>
 <!-- rnb-source-begin eyJkYXRhIjoiZmxhZ3NfZGYgPC0gcmVhZHI6OnJlYWRfdHN2KGZsYWdzX3BhdGgpIn0= -->
 <pre class="r"><code>flags_df &lt;- readr::read_tsv(flags_path)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-message-begin eyJkYXRhIjoiUm93czogNTAgQ29sdW1uczogMlxu4pSA4pSAIENvbHVtbiBzcGVjaWZpY2F0aW9uIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgFxuRGVsaW1pdGVyOiBcIlxcdFwiXG5jaHIgKDEpOiBnZW5lXG5kYmwgKDEpOiBjb3VudFxuXG7ihLkgVXNlIGBzcGVjKClgIHRvIHJldHJpZXZlIHRoZSBmdWxsIGNvbHVtbiBzcGVjaWZpY2F0aW9uIGZvciB0aGlzIGRhdGEuXG7ihLkgU3BlY2lmeSB0aGUgY29sdW1uIHR5cGVzIG9yIHNldCBgc2hvd19jb2xfdHlwZXMgPSBGQUxTRWAgdG8gcXVpZXQgdGhpcyBtZXNzYWdlLlxuIn0= -->
+<!-- rnb-message-begin eyJkYXRhIjoiUm93czogNTAgQ29sdW1uczogMlxu4pSA4pSAIENvbHVtbiBzcGVjaWZpY2F0aW9uIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgFxuRGVsaW1pdGVyOiBcIlxcdFwiXG5jaHIgKDEpOiBnZW5lXG5kYmwgKDEpOiBjb3VudFxuXG7ihLkgVXNlIGBzcGVjKClgIHRvIHJldHJpZXZlIHRoZSBmdWxsIGNvbHVtbiBzcGVjaWZpY2F0aW9uIGZvciB0aGlzIGRhdGEuXG7ihLkgU3BlY2lmeSB0aGUgY29sdW1uIHR5cGVzIG9yIHNldCBgc2hvd19jb2xfdHlwZXMgPSBGQUxTRWAgdG8gcXVpZXQgdGhpcyBtZXNzYWdlLlxuIn0= -->
 <pre><code>Rows: 50 Columns: 2
-── Column specification ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+── Column specification ───────────────────────────────────────────────────────────────────────
 Delimiter: &quot;\t&quot;
 chr (1): gene
 dbl (1): count
@@ -3371,10 +3371,10 @@ with a bit more information.</p>
 <!-- rnb-source-begin eyJkYXRhIjoic2Vzc2lvbkluZm8oKSJ9 -->
 <pre class="r"><code>sessionInfo()</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiUiB2ZXJzaW9uIDQuNC4yICgyMDI0LTEwLTMxKVxuUGxhdGZvcm06IGFhcmNoNjQtYXBwbGUtZGFyd2luMjBcblJ1bm5pbmcgdW5kZXI6IG1hY09TIFNlcXVvaWEgMTUuMy4yXG5cbk1hdHJpeCBwcm9kdWN0czogZGVmYXVsdFxuQkxBUzogICAvTGlicmFyeS9GcmFtZXdvcmtzL1IuZnJhbWV3b3JrL1ZlcnNpb25zLzQuNC1hcm02NC9SZXNvdXJjZXMvbGliL2xpYlJibGFzLjAuZHlsaWIgXG5MQVBBQ0s6IC9MaWJyYXJ5L0ZyYW1ld29ya3MvUi5mcmFtZXdvcmsvVmVyc2lvbnMvNC40LWFybTY0L1Jlc291cmNlcy9saWIvbGliUmxhcGFjay5keWxpYjsgIExBUEFDSyB2ZXJzaW9uIDMuMTIuMFxuXG5sb2NhbGU6XG5bMV0gZW5fVVMuVVRGLTgvZW5fVVMuVVRGLTgvZW5fVVMuVVRGLTgvQy9lbl9VUy5VVEYtOC9lbl9VUy5VVEYtOFxuXG50aW1lIHpvbmU6IEFtZXJpY2EvTmV3X1lvcmtcbnR6Y29kZSBzb3VyY2U6IGludGVybmFsXG5cbmF0dGFjaGVkIGJhc2UgcGFja2FnZXM6XG5bMV0gc3RhdHMgICAgIGdyYXBoaWNzICBnckRldmljZXMgdXRpbHMgICAgIGRhdGFzZXRzICBtZXRob2RzICAgYmFzZSAgICAgXG5cbm90aGVyIGF0dGFjaGVkIHBhY2thZ2VzOlxuWzFdIGdncGxvdDJfMy41LjEgZHBseXJfMS4xLjQgIFxuXG5sb2FkZWQgdmlhIGEgbmFtZXNwYWNlIChhbmQgbm90IGF0dGFjaGVkKTpcbiBbMV0gYml0XzQuNS4wLjEgICAgICAgIGd0YWJsZV8wLjMuNSAgICAgICBqc29ubGl0ZV8xLjguOCAgICAgaGlnaHJfMC4xMSAgICAgICAgXG4gWzVdIGNyYXlvbl8xLjUuMyAgICAgICBjb21waWxlcl80LjQuMiAgICAgdGlkeXNlbGVjdF8xLjIuMSAgIHBhcmFsbGVsXzQuNC4yICAgIFxuIFs5XSBqcXVlcnlsaWJfMC4xLjQgICAgdGV4dHNoYXBpbmdfMS4wLjAgIHN5c3RlbWZvbnRzXzEuMi4xICBzY2FsZXNfMS4zLjAgICAgICBcblsxM10geWFtbF8yLjMuMTAgICAgICAgIGZhc3RtYXBfMS4yLjAgICAgICBoZXJlXzEuMC4xICAgICAgICAgcmVhZHJfMi4xLjUgICAgICAgXG5bMTddIFI2XzIuNS4xICAgICAgICAgICBsYWJlbGluZ18wLjQuMyAgICAgZ2VuZXJpY3NfMC4xLjMgICAgIGtuaXRyXzEuNDggICAgICAgIFxuWzIxXSB0aWJibGVfMy4yLjEgICAgICAgbXVuc2VsbF8wLjUuMSAgICAgIHJwcm9qcm9vdF8yLjAuNCAgICBSQ29sb3JCcmV3ZXJfMS4xLTNcblsyNV0gYnNsaWJfMC44LjAgICAgICAgIHBpbGxhcl8xLjEwLjEgICAgICB0emRiXzAuNC4wICAgICAgICAgcmxhbmdfMS4xLjQgICAgICAgXG5bMjldIGNhY2hlbV8xLjEuMCAgICAgICB4ZnVuXzAuNTEgICAgICAgICAgc2Fzc18wLjQuOSAgICAgICAgIGJpdDY0XzQuNi4wLTEgICAgIFxuWzMzXSBjbGlfMy42LjMgICAgICAgICAgd2l0aHJfMy4wLjEgICAgICAgIG1hZ3JpdHRyXzIuMC4zICAgICBkaWdlc3RfMC42LjM3ICAgICBcblszN10gZ3JpZF80LjQuMiAgICAgICAgIHZyb29tXzEuNi41ICAgICAgICByc3R1ZGlvYXBpXzAuMTcuMSAgaG1zXzEuMS4zICAgICAgICAgXG5bNDFdIGxpZmVjeWNsZV8xLjAuNCAgICB2Y3Ryc18wLjYuNSAgICAgICAgZXZhbHVhdGVfMS4wLjAgICAgIGdsdWVfMS43LjAgICAgICAgIFxuWzQ1XSBmYXJ2ZXJfMi4xLjIgICAgICAgcmFnZ18xLjMuMyAgICAgICAgIGNvbG9yc3BhY2VfMi4xLTEgICBybWFya2Rvd25fMi4yOCAgICBcbls0OV0gdG9vbHNfNC40LjIgICAgICAgIHBrZ2NvbmZpZ18yLjAuMyAgICBodG1sdG9vbHNfMC41LjguMSBcbiJ9 -->
-<pre><code>R version 4.4.2 (2024-10-31)
+<!-- rnb-output-begin eyJkYXRhIjoiUiB2ZXJzaW9uIDQuNC4zICgyMDI1LTAyLTI4KVxuUGxhdGZvcm06IGFhcmNoNjQtYXBwbGUtZGFyd2luMjBcblJ1bm5pbmcgdW5kZXI6IG1hY09TIFNlcXVvaWEgMTUuNFxuXG5NYXRyaXggcHJvZHVjdHM6IGRlZmF1bHRcbkJMQVM6ICAgL0xpYnJhcnkvRnJhbWV3b3Jrcy9SLmZyYW1ld29yay9WZXJzaW9ucy80LjQtYXJtNjQvUmVzb3VyY2VzL2xpYi9saWJSYmxhcy4wLmR5bGliIFxuTEFQQUNLOiAvTGlicmFyeS9GcmFtZXdvcmtzL1IuZnJhbWV3b3JrL1ZlcnNpb25zLzQuNC1hcm02NC9SZXNvdXJjZXMvbGliL2xpYlJsYXBhY2suZHlsaWI7ICBMQVBBQ0sgdmVyc2lvbiAzLjEyLjBcblxubG9jYWxlOlxuWzFdIGVuX1VTLlVURi04L2VuX1VTLlVURi04L2VuX1VTLlVURi04L0MvZW5fVVMuVVRGLTgvZW5fVVMuVVRGLThcblxudGltZSB6b25lOiBBbWVyaWNhL0xvc19BbmdlbGVzXG50emNvZGUgc291cmNlOiBpbnRlcm5hbFxuXG5hdHRhY2hlZCBiYXNlIHBhY2thZ2VzOlxuWzFdIHN0YXRzICAgICBncmFwaGljcyAgZ3JEZXZpY2VzIHV0aWxzICAgICBkYXRhc2V0cyAgbWV0aG9kcyAgIGJhc2UgICAgIFxuXG5vdGhlciBhdHRhY2hlZCBwYWNrYWdlczpcblsxXSBnZ3Bsb3QyXzMuNS4xIGRwbHlyXzEuMS40ICBcblxubG9hZGVkIHZpYSBhIG5hbWVzcGFjZSAoYW5kIG5vdCBhdHRhY2hlZCk6XG4gWzFdIGJpdF80LjYuMCAgICAgICAgICBndGFibGVfMC4zLjYgICAgICAganNvbmxpdGVfMi4wLjAgICAgIGNyYXlvbl8xLjUuMyAgICAgIFxuIFs1XSBjb21waWxlcl80LjQuMyAgICAgdGlkeXNlbGVjdF8xLjIuMSAgIHBhcmFsbGVsXzQuNC4zICAgICBqcXVlcnlsaWJfMC4xLjQgICBcbiBbOV0gdGV4dHNoYXBpbmdfMS4wLjAgIHN5c3RlbWZvbnRzXzEuMi4yICBzY2FsZXNfMS4zLjAgICAgICAgeWFtbF8yLjMuMTAgICAgICAgXG5bMTNdIGZhc3RtYXBfMS4yLjAgICAgICBoZXJlXzEuMC4xICAgICAgICAgcmVhZHJfMi4xLjUgICAgICAgIFI2XzIuNi4xICAgICAgICAgIFxuWzE3XSBsYWJlbGluZ18wLjQuMyAgICAgZ2VuZXJpY3NfMC4xLjMgICAgIGtuaXRyXzEuNTAgICAgICAgICB0aWJibGVfMy4yLjEgICAgICBcblsyMV0gbXVuc2VsbF8wLjUuMSAgICAgIHJwcm9qcm9vdF8yLjAuNCAgICBSQ29sb3JCcmV3ZXJfMS4xLTMgYnNsaWJfMC45LjAgICAgICAgXG5bMjVdIHBpbGxhcl8xLjEwLjIgICAgICB0emRiXzAuNS4wICAgICAgICAgcmxhbmdfMS4xLjUgICAgICAgIGNhY2hlbV8xLjEuMCAgICAgIFxuWzI5XSB4ZnVuXzAuNTIgICAgICAgICAgc2Fzc18wLjQuOSAgICAgICAgIGJpdDY0XzQuNi4wLTEgICAgICBjbGlfMy42LjQgICAgICAgICBcblszM10gd2l0aHJfMy4wLjIgICAgICAgIG1hZ3JpdHRyXzIuMC4zICAgICBkaWdlc3RfMC42LjM3ICAgICAgZ3JpZF80LjQuMyAgICAgICAgXG5bMzddIHZyb29tXzEuNi41ICAgICAgICByc3R1ZGlvYXBpXzAuMTcuMSAgaG1zXzEuMS4zICAgICAgICAgIGxpZmVjeWNsZV8xLjAuNCAgIFxuWzQxXSB2Y3Ryc18wLjYuNSAgICAgICAgZXZhbHVhdGVfMS4wLjMgICAgIGdsdWVfMS44LjAgICAgICAgICBmYXJ2ZXJfMi4xLjIgICAgICBcbls0NV0gcmFnZ18xLjMuMyAgICAgICAgIGNvbG9yc3BhY2VfMi4xLTEgICBybWFya2Rvd25fMi4yOSAgICAgdG9vbHNfNC40LjMgICAgICAgXG5bNDldIHBrZ2NvbmZpZ18yLjAuMyAgICBodG1sdG9vbHNfMC41LjguMSBcbiJ9 -->
+<pre><code>R version 4.4.3 (2025-02-28)
 Platform: aarch64-apple-darwin20
-Running under: macOS Sequoia 15.3.2
+Running under: macOS Sequoia 15.4
 
 Matrix products: default
 BLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib 
@@ -3383,7 +3383,7 @@ LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlap
 locale:
 [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
 
-time zone: America/New_York
+time zone: America/Los_Angeles
 tzcode source: internal
 
 attached base packages:
@@ -3393,19 +3393,19 @@ other attached packages:
 [1] ggplot2_3.5.1 dplyr_1.1.4  
 
 loaded via a namespace (and not attached):
- [1] bit_4.5.0.1        gtable_0.3.5       jsonlite_1.8.8     highr_0.11        
- [5] crayon_1.5.3       compiler_4.4.2     tidyselect_1.2.1   parallel_4.4.2    
- [9] jquerylib_0.1.4    textshaping_1.0.0  systemfonts_1.2.1  scales_1.3.0      
-[13] yaml_2.3.10        fastmap_1.2.0      here_1.0.1         readr_2.1.5       
-[17] R6_2.5.1           labeling_0.4.3     generics_0.1.3     knitr_1.48        
-[21] tibble_3.2.1       munsell_0.5.1      rprojroot_2.0.4    RColorBrewer_1.1-3
-[25] bslib_0.8.0        pillar_1.10.1      tzdb_0.4.0         rlang_1.1.4       
-[29] cachem_1.1.0       xfun_0.51          sass_0.4.9         bit64_4.6.0-1     
-[33] cli_3.6.3          withr_3.0.1        magrittr_2.0.3     digest_0.6.37     
-[37] grid_4.4.2         vroom_1.6.5        rstudioapi_0.17.1  hms_1.1.3         
-[41] lifecycle_1.0.4    vctrs_0.6.5        evaluate_1.0.0     glue_1.7.0        
-[45] farver_2.1.2       ragg_1.3.3         colorspace_2.1-1   rmarkdown_2.28    
-[49] tools_4.4.2        pkgconfig_2.0.3    htmltools_0.5.8.1 </code></pre>
+ [1] bit_4.6.0          gtable_0.3.6       jsonlite_2.0.0     crayon_1.5.3      
+ [5] compiler_4.4.3     tidyselect_1.2.1   parallel_4.4.3     jquerylib_0.1.4   
+ [9] textshaping_1.0.0  systemfonts_1.2.2  scales_1.3.0       yaml_2.3.10       
+[13] fastmap_1.2.0      here_1.0.1         readr_2.1.5        R6_2.6.1          
+[17] labeling_0.4.3     generics_0.1.3     knitr_1.50         tibble_3.2.1      
+[21] munsell_0.5.1      rprojroot_2.0.4    RColorBrewer_1.1-3 bslib_0.9.0       
+[25] pillar_1.10.2      tzdb_0.5.0         rlang_1.1.5        cachem_1.1.0      
+[29] xfun_0.52          sass_0.4.9         bit64_4.6.0-1      cli_3.6.4         
+[33] withr_3.0.2        magrittr_2.0.3     digest_0.6.37      grid_4.4.3        
+[37] vroom_1.6.5        rstudioapi_0.17.1  hms_1.1.3          lifecycle_1.0.4   
+[41] vctrs_0.6.5        evaluate_1.0.3     glue_1.8.0         farver_2.1.2      
+[45] ragg_1.3.3         colorspace_2.1-1   rmarkdown_2.29     tools_4.4.3       
+[49] pkgconfig_2.0.3    htmltools_0.5.8.1 </code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 </div>
