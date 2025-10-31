@@ -14,4 +14,4 @@ This analysis includes the following scripts/notebooks:
 
 ## Input data
 
-This script processes MAF files stored in `../data/processed/maf_files`
+This analysis uses MAF files stored in `../data/processed/maf_files`
