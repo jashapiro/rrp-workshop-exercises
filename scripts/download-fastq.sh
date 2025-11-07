@@ -12,41 +12,53 @@ fastq_url="ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR115/089/SRR11518889"
 
 # Define files and directories
 fastq_r1="SRR11518889_1.fastq.gz"
+fastq_r2="SRR11518889_2.fastq.gz"
 fastq_dir="../data/raw/fastq/$study_id"
+trimmed_dir="../data/trimmed/$study_id"
+reports_dir="../reports/fastp"
 
 # Create fastq directory
-mkdir -p $fastq_dir
+mkdir -p $fastq_dir $trimmed_dir $reports_dir
 
 #### Obtain and "process" the R1 fastq file
 
 echo "Obtaining ${fastq_r1}" # this is going to print
 
-# download the file
-# the -O flag keeps the original internet file name
-curl -O $fastq_url/$fastq_r1
+if [ ! -f "$fastq_dir/$fastq_r1" ]; then
+    # download the file
+    # the -O flag keeps the original internet file name
+    curl -O $fastq_url/$fastq_r1
 
-# Explore the file: How many lines?
-echo "The number of lines in $fastq_r1 is...drumroll........"
-gunzip -c $fastq_r1 | wc -l
+    # Explore the file: How many lines?
+    echo "The number of lines in $fastq_r1 is...drumroll........"
+    gunzip -c $fastq_r1 | wc -l
 
-# Move the fastq file to its home
-mv $fastq_r1 $fastq_dir
-
+    # Move the fastq file to its home
+    mv $fastq_r1 $fastq_dir
+fi
 
 ##### Obtain R2
-fastq_r2="SRR11518889_2.fastq.gz"
+if [ ! -f "$fastq_dir/$fastq_r2" ]; then
+    echo "Obtaining ${fastq_r2}" # this is going to print
 
-echo "Obtaining ${fastq_r2}" # this is going to print
+    # download the file
+    # the -O flag keeps the original internet file name
+    curl -O $fastq_url/$fastq_r2
 
-# download the file
-# the -O flag keeps the original internet file name
-curl -O $fastq_url/$fastq_r2
+    # Explore the file: How many lines?
+    echo "The number of lines in $fastq_r2 is...drumroll........"
+    gunzip -c $fastq_r2 | wc -l
 
-# Explore the file: How many lines?
-echo "The number of lines in $fastq_r2 is...drumroll........"
-gunzip -c $fastq_r2 | wc -l
+    # Move the fastq file to its home
+    mv $fastq_r2 $fastq_dir
+fi
 
-# Move the fastq file to its home
-mv $fastq_r2 $fastq_dir
+# Trim the files with fastp
+fastp \
+  --in1 $fastq_dir/$fastq_r1 \
+  --in2 $fastq_dir/$fastq_r2 \
+  --out1 $trimmed_dir/$fastq_r1 \
+  --out2 $trimmed_dir/$fastq_r2 \
+  --html "$reports_dir/${study_id}_report.html"
 
 
